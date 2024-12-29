@@ -46,26 +46,26 @@ Leave D0–D3 unconnected for 4-bit mode.
 
 **Arduino Code (Using LiquidCrystal Library):**
 
-#include <LiquidCrystal.h>
+    #include <LiquidCrystal.h>
 
-    // Initialize the library with the numbers of the interface pins
-    // (RS, E, D4, D5, D6, D7)
+// Initialize the library with the numbers of the interface pins
+// (RS, E, D4, D5, D6, D7)
 
-LiquidCrystal lcd(7, 8, 9, 10, 11, 12);
+    LiquidCrystal lcd(7, 8, 9, 10, 11, 12);
+    
+    void setup() {
 
-void setup() {
+// Set up the LCD's number of columns and rows:
 
-    // Set up the LCD's number of columns and rows:
+    lcd.begin(16, 2);
 
-lcd.begin(16, 2);
-  // Print a message to the LCD
+// Print a message to the LCD
 
-lcd.print("Hello, World!");
-}
+    lcd.print("Hello, World!");
+    }
 
-void loop() {
-    // Do nothing here
-}
+    void loop() {
+    }
 
 **Notes:**
 The code initializes the LCD in 4-bit mode. This reduces the number of pins required.
